@@ -1,6 +1,7 @@
-Sure! Here's the updated README.md file with the added instructions:
+Sure! Below is a detailed and documented version of the project structure along with explanations for each file. You can add this content to your README.md file.
 
-```markdown
+---
+
 # Secure S3 Folder Access Terraform Configuration
 
 This Terraform configuration sets up an S3 bucket with restricted access for a single IAM user. The IAM user is granted permissions to upload/download files only from a folder named `/docs` within the bucket.
@@ -46,6 +47,9 @@ This directory contains the Terraform module for creating the IAM user and manag
 - `outputs.tf`: Specifies outputs for the IAM user module, such as the access key ID.
 - `README.md`: Provides documentation for the IAM user module, including input variables and outputs.
 
+### `data.tf`
+This file contains a data source block to fetch the AWS region dynamically.
+
 ### `main.tf`
 This file is the main Terraform configuration file. It uses the modules defined in `s3_bucket` and `iam_user` directories to provision the S3 bucket and IAM user.
 
@@ -59,9 +63,45 @@ These files contain input variable values in key-value pairs, allowing users to 
 
 1. **Clone the Repository**: 
    ```
-   git clone https://github.com/your/repository.git
+   git clone https://github.com/movvamanoj/secure-s3-folder-access.git
    cd secure-s3-folder-access
    ```
+
+## Create a New Repository
+
+To create a new repository on the command line, run the following commands:
+
+```bash
+echo "# secure-s3-folder-access" >> README.md
+```
+git init
+```
+```
+git add README.md
+```
+```
+git commit -m "first commit"
+```
+```
+git branch -M main
+```
+```
+git remote add origin https://github.com/movvamanoj/secure-s3-folder-access.git
+```
+```
+git push -u origin main
+```
+
+push an existing repository from the command line
+```
+git remote add origin https://github.com/movvamanoj/secure-s3-folder-access.git
+```
+```
+git branch -M main
+```
+```
+git push -u origin main
+```
 
 2. **Initialize Terraform**: 
    ```
@@ -100,35 +140,6 @@ To clean up the resources created by this Terraform configuration, simply run:
 
 **Note:** Ensure you have appropriate permissions to delete the resources.
 
-## Create a New Repository
-
-To create a new repository on the command line, run the following commands:
-
-```bash
-echo "# secure-s3-folder-access" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/movvamanoj/secure-s3-folder-access.git
-git push -u origin main
-```
-
-## Push an Existing Repository
-
-To push an existing repository from the command line, run the following commands:
-
-```bash
-git remote add origin https://github.com/movvamanoj/secure-s3-folder-access.git
-git branch -M main
-git push -u origin main
-```
-
-Replace `https://github.com/movvamanoj/secure-s3-folder-access.git` with your repository URL.
-
 ---
 
 You can copy and paste this content into your README.md file. Feel free to customize it further to fit your specific needs.
-```
-
-This README.md provides detailed instructions on how to use the Terraform configuration, along with guidance on creating and pushing the repository to GitHub.

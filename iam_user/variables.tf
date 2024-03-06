@@ -4,6 +4,6 @@ variable "bucket_arn" {
 }
 
 variable "user_name" {
-  description = "The name of the IAM user who will have access to the S3 bucket."
+  description = "The name of the IAM user."
   type        = string
 }
